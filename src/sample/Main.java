@@ -12,8 +12,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.StackPane;
-import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
@@ -49,7 +47,7 @@ public class Main extends Application {
         signInPane.setVgap(5);
         formName.setFont(Font.font("Courier New, sans-serif", FontWeight.BOLD, 24));
         signInPane.add(formName, 0, 0, 2, 1);
-        Label emailId = new Label("Email ID: ");
+        Label emailId = new Label("Email ID:");
         TextField emailIdTf = new TextField();
 
         signInPane.add(emailId, 0, 2);
@@ -68,14 +66,15 @@ public class Main extends Application {
         signInBtn.setPrefWidth(100);
         signInBtn.setPrefHeight(45);
         signInBtn.setPadding(new Insets(11));
+//        signInBtn.setStyle("-fx-background-color: green;");
         signInBtn.setDefaultButton(true);
         signInPane.add(signInBtn, 0, 4);
 
         signInBtn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                if (emailId.getText().isEmpty()){
-                    responseMsg("Thank You!", "Registered Successfully", "success");
+                if (!(emailIdTf.getText().isEmpty())){
+                    responseMsg("Thank You!", "signed in Successfully", "success");
                 }else {
                     responseMsg("your Email ID or password maybe wrong ", "Authentication failed", "err");
                 }
@@ -114,14 +113,14 @@ public class Main extends Application {
         formName.setFont(Font.font("Courier New, sans-serif", FontWeight.BOLD, 24));
         gp.add(formName, 0, 0, 2, 1);
 
-        Label fullName = new Label("Full name: ");
+        Label fullName = new Label("Full name:");
         TextField fullNameTf = new TextField();
 
         // add to pane
         gp.add(fullName, 0, 1);
         gp.add(fullNameTf, 1, 1);
 
-        Label emailId = new Label("Email ID: ");
+        Label emailId = new Label("Email ID:");
         TextField emailIdTf = new TextField();
 
         gp.add(emailId, 0, 2);
@@ -156,6 +155,7 @@ public class Main extends Application {
                     responseMsg("please make sure to enter your password", "Credential must be filled", "err");
                 } else {
                     responseMsg("Thank You!", "Registered Successfully", "success");
+                    gp.getScene().getWindow().hide();
                 }
             }
         });
