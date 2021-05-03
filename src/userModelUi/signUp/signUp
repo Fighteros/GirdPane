@@ -48,9 +48,9 @@
             <font>
                 <Font name="Dubai Regular" size="14.0" />
             </font>
-         <GridPane.margin>
-            <Insets />
-         </GridPane.margin></TextField>
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin></TextField>
         <Button cancelButton="true" mnemonicParsing="false" prefHeight="75.0" prefWidth="125.0" style="-fx-background-color: #ff4136; -fx-background-radius: 15px;" text="Cancel" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5">
             <font>
                 <Font name="Dubai Regular" size="14.0" />
@@ -63,15 +63,15 @@
             <font>
                 <Font name="Dubai Regular" size="14.0" />
             </font>
-         <GridPane.margin>
-            <Insets />
-         </GridPane.margin>
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin>
         </Button>
-      <TextField alignment="CENTER" layoutX="169.0" layoutY="160.0" prefHeight="19.0" prefWidth="143.0" promptText="example@email.com" style="-fx-background-radius: 15px; -fx-padding: 8px;" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
-         <font>
-            <Font name="Dubai Regular" size="14.0" />
-         </font>
-      </TextField>
+        <TextField alignment="CENTER" layoutX="169.0" layoutY="160.0" prefHeight="19.0" prefWidth="143.0" promptText="example@email.com" style="-fx-background-radius: 15px; -fx-padding: 8px;" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+            <font>
+                <Font name="Dubai Regular" size="14.0" />
+            </font>
+        </TextField>
     </children>
     <opaqueInsets>
         <Insets bottom="11.0" left="11.0" right="11.0" top="11.0" />

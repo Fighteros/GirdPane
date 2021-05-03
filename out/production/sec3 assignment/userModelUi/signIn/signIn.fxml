@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.*?>
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
@@ -37,14 +38,14 @@
             <Insets bottom="11.0" top="11.0" />
          </padding>
       </Label>
-      <TextField alignment="CENTER" prefHeight="19.0" prefWidth="143.0" promptText="username" style="-fx-background-radius: 15px; -fx-padding: 8px;" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.rowIndex="2">
+      <TextField fx:id="username" alignment="CENTER" prefHeight="19.0" prefWidth="143.0" promptText="username" style="-fx-background-radius: 15px; -fx-padding: 8px;" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.rowIndex="2">
          <GridPane.margin>
             <Insets />
          </GridPane.margin>
          <font>
             <Font name="Dubai Regular" size="14.0" />
          </font></TextField>
-      <TextField accessibleRole="PASSWORD_FIELD" alignment="CENTER" layoutX="277.0" layoutY="215.0" prefHeight="25.0" prefWidth="145.0" promptText="password" style="-fx-background-radius: 15px; -fx-padding: 8px;" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3">
+      <TextField fx:id="password" accessibleRole="PASSWORD_FIELD" alignment="CENTER" layoutX="277.0" layoutY="215.0" prefHeight="25.0" prefWidth="145.0" promptText="password" style="-fx-background-radius: 15px; -fx-padding: 8px;" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3">
          <font>
             <Font name="Dubai Regular" size="14.0" />
          </font></TextField>
@@ -53,18 +54,24 @@
             <Insets left="12.0" />
          </padding>
       </Hyperlink>
-      <Button defaultButton="true" mnemonicParsing="false" prefHeight="75.0" prefWidth="125.0" style="-fx-background-color: #0074d9; -fx-background-radius: 15px;" text="Login" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+      <Button fx:id="signInBtn" defaultButton="true" mnemonicParsing="false" onMouseClicked="#signInBtnClicked" prefHeight="75.0" prefWidth="125.0" style="-fx-background-color: #0074d9; -fx-background-radius: 15px;" text="Login" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5">
          <font>
             <Font name="Dubai Regular" size="14.0" />
          </font>
          <GridPane.margin>
             <Insets />
          </GridPane.margin>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
-      <Button defaultButton="true" layoutX="169.0" layoutY="311.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="125.0" style="-fx-background-color: #2ecc40; -fx-background-radius: 15px;" text="Sign Up" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="5">
+      <Button fx:id="signUpBtn" defaultButton="true" layoutX="169.0" layoutY="311.0" mnemonicParsing="false" onMouseClicked="#signUpBtnClicked" prefHeight="75.0" prefWidth="125.0" style="-fx-background-color: #2ecc40; -fx-background-radius: 15px;" text="Sign Up" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="5">
          <font>
             <Font name="Dubai Regular" size="14.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
    </children>
    <opaqueInsets>
