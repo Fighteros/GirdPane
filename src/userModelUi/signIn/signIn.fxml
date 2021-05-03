@@ -48,7 +48,7 @@
          <font>
             <Font name="Dubai Regular" size="14.0" />
          </font></TextField>
-      <Hyperlink contentDisplay="TOP" text="forgot password?" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" GridPane.valignment="TOP">
+      <Hyperlink contentDisplay="TOP" text="forgot password?" textFill="WHITE" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" GridPane.valignment="TOP">
          <padding>
             <Insets left="12.0" />
          </padding>
