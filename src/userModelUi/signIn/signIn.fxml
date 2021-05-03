@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="CENTER" hgap="5.0" prefHeight="376.0" prefWidth="575.0" vgap="5.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="userModelUi.signIn.signIn">
+   <padding>
+      <Insets bottom="11.0" left="11.0" right="11.0" top="11.0" />
+   </padding>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints maxHeight="59.99999999999994" minHeight="24.0" prefHeight="93.0" />
+      <RowConstraints maxHeight="49.0" minHeight="0.0" prefHeight="79.0" />
+   </rowConstraints>
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints minWidth="10.0" prefWidth="104.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="122.0" />
+   </columnConstraints>
+   <children>
+      <Label alignment="CENTER" contentDisplay="TOP" lineSpacing="1.0" prefHeight="60.0" prefWidth="264.0" text="Sign In" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BASELINE">
+         <font>
+            <Font name="Courier New Bold" size="45.0" />
+         </font>
+         <opaqueInsets>
+            <Insets bottom="11.0" left="11.0" right="11.0" top="11.0" />
+         </opaqueInsets>
+         <GridPane.margin>
+            <Insets bottom="22.0" top="22.0" />
+         </GridPane.margin>
+         <padding>
+            <Insets bottom="11.0" top="11.0" />
+         </padding>
+      </Label>
+      <TextField prefHeight="19.0" prefWidth="143.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin></TextField>
+      <Label contentDisplay="CENTER" prefHeight="81.0" prefWidth="278.0" text="Username:" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <font>
+            <Font name="Dubai Regular" size="18.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="22.0" left="11.0" right="11.0" top="22.0" />
+         </GridPane.margin>
+      </Label>
+      <Label alignment="CENTER" text="Password:" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+         <font>
+            <Font name="Dubai Regular" size="18.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="11.0" top="11.0" />
+         </GridPane.margin></Label>
+      <TextField layoutX="277.0" layoutY="215.0" prefHeight="25.0" prefWidth="145.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+   </children>
+   <opaqueInsets>
+      <Insets bottom="11.0" left="11.0" right="11.0" top="11.0" />
+   </opaqueInsets>
+</GridPane>
