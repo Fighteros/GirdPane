@@ -1,6 +1,6 @@
 package userModelUi.signIn;
 
-import dataAccessLayer.fakePersonDataAccessService;
+import dataAccessLayer.PersonDao;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -11,6 +11,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import userModel.Person;
 
 import java.io.IOException;
 import java.util.Locale;
@@ -18,7 +19,8 @@ import java.util.Locale;
 
 public class signIn {
     // apply fake database temporary
-    private fakePersonDataAccessService fakePerson;
+    private PersonDao personDao;
+
     @FXML
     private Button signInBtn;
     @FXML
@@ -82,8 +84,12 @@ public class signIn {
         return 0;
     }
 
-    public void updatePassword(MouseEvent event){
-        // should apply another Scene
-        System.out.println("okay working!");
+    public void updatePassword(MouseEvent event) throws IOException{
+        // applying the reset password Ui
+        FXMLLoader resetPass = new FXMLLoader(getClass().getResource("../passChange/passChange.fxml"));
+        Scene resetPassScene = new Scene(resetPass.load(), 800, 500);
+        Stage primaryStage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        primaryStage.setScene(resetPassScene);
+        primaryStage.setTitle("Reset your password!");
     }
 }
