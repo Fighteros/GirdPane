@@ -11,6 +11,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import userModelUi.appUtils;
 
 import java.io.IOException;
 import java.util.Locale;
@@ -47,10 +48,7 @@ public class signIn {
 
     // change scene
     public void signUpBtnClicked(MouseEvent event) throws IOException {
-        FXMLLoader regsLoader = new FXMLLoader(getClass().getResource("../signUp/signUp.fxml"));
-        Scene regScene = new Scene(regsLoader.load(), 800, 500);
-        Stage primaryStage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        primaryStage.setScene(regScene);
+        appUtils.swapScenes(event, "sign up", new FXMLLoader(getClass().getResource("../signUp/signUp.fxml")));
     }
 
     // design nice alert for the UI
