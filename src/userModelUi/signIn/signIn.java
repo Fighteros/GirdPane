@@ -1,13 +1,22 @@
 package userModelUi.signIn;
 
+import dataAccessLayer.fakePersonDataAccessService;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 
 public class signIn {
+    // apply fake database temporary
+    private fakePersonDataAccessService fakePerson;
     @FXML
     private Button signInBtn;
     @FXML
@@ -32,6 +41,21 @@ public class signIn {
         }
     }
 
+    // change scene
+    public void signUpBtnClicked(MouseEvent event) throws IOException {
+//        System.out.println("clicked");
+        FXMLLoader regsLoader = new FXMLLoader(getClass().getResource("../signUp/signUp.fxml"));
+        Scene regScene = new Scene(regsLoader.load(), 800, 500);
+        Stage primaryStage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        primaryStage.setScene(regScene);
+    }
+
+    public  void updatePassword(MouseEvent event){
+        // should apply another Scene
+        System.out.println("okay working!");
+    }
+
+
     private void makeAlert(Alert alert, String headerMessage){
         alert.setHeaderText(null);
         alert.setGraphic(null);
@@ -41,7 +65,7 @@ public class signIn {
         alert.showAndWait();
     }
     private void LoginUser() {
-        makeAlert(new Alert(Alert.AlertType.INFORMATION), "Logged In Successfully");
+
     }
 
     public int isDataValid(){
