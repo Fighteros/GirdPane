@@ -1,34 +1,9 @@
-package sample;
-
-import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.geometry.HPos;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.GridPane;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
-import javafx.scene.text.Text;
-import javafx.stage.Stage;
-
-import javax.swing.*;
-
-public class Main extends Application {
-    @Override
-    public void start(Stage primaryStage) {
-        GridPane gp = makeForm();
-        addUiSignInControls(gp);
-        Scene scene = new Scene(gp, 800, 500);
-        primaryStage.setScene(scene);
-        primaryStage.setTitle("Registration Form");
-        primaryStage.show();
-    }
+    GridPane gp = makeForm();
+            addUiSignInControls(gp);
+            Scene scene = new Scene(gp, 800, 500);
+            primaryStage.setScene(scene);
+            primaryStage.setTitle("Registration Form");
+            primaryStage.show();
 
     private GridPane makeForm() {
         GridPane gp = new GridPane();
@@ -43,8 +18,8 @@ public class Main extends Application {
         signInPane.setPadding(new Insets(25));
         GridPane.setMargin(formName, new Insets(20, 0, 20, 0));
         GridPane.setHalignment(formName, HPos.CENTER);
-        signInPane.setHgap(5);
-        signInPane.setVgap(5);
+        signInPane.setHgap(2);
+        signInPane.setVgap(2);
         formName.setFont(Font.font("Courier New, sans-serif", FontWeight.BOLD, 24));
         signInPane.add(formName, 0, 0, 2, 1);
         Label emailId = new Label("Email ID:");
@@ -177,8 +152,3 @@ public class Main extends Application {
         addUiRgControls(gp);
         return gp;
     }
-
-    public static void main(String[] args) {
-        launch(args);
-    }
-}
