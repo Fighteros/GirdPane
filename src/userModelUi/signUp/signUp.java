@@ -1,22 +1,25 @@
 package userModelUi.signUp;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import javafx.stage.Window;
-import javafx.stage.WindowEvent;
 
-import java.awt.*;
-import java.awt.event.MouseEvent;
+import java.io.IOException;
 
 public class signUp {
 
     @FXML
     private Button cancelBtn;
-
-    public void handleCancelBtn(MouseEvent event){
-//        Window window = cancelBtn.getScene().getWindow();
-//        window.fireEvent(new WindowEvent(window, WindowEvent.WINDOW_CLOSE_REQUEST));
+    // change scene to sing in view
+    public void handleCancelBtn(MouseEvent mouseEvent) throws IOException {
+        Stage primaryStage = (Stage) ((Node)mouseEvent.getSource()).getScene().getWindow();
+        FXMLLoader signInFxml =  new FXMLLoader(getClass().getResource("../signIn/signIn.fxml"));
+        Scene signInScene = new Scene(signInFxml.load(), 800, 500);
+        primaryStage.setScene(signInScene);
+        primaryStage.setTitle("sign in");
     }
 }
