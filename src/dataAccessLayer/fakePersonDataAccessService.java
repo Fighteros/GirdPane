@@ -33,9 +33,20 @@ public class fakePersonDataAccessService implements PersonDao {
         return 1;
     }
 
+     @Override
+     public Optional<Person> selectPersonByUsername(String username) {
+         return  DB.stream()
+                 .filter(person -> person.getUsername().equals(username))
+                 .findFirst();
+     }
 
+     @Override
+     public UUID getPersonIdByUsername(Person person) {
+        Optional<Person> personOptional = selectPersonByUsername(person.getUsername());
+         return personOptional.map(Person::getId).orElse(null);
+     }
 
-    @Override
+     @Override
     public int updatePersonById(UUID id, Person person){
         return selectPersonById(id).map(p -> {
             int indexOfPersonToUpdate = DB.indexOf(p);

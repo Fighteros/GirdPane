@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="CENTER" hgap="8.0" prefHeight="376.0" prefWidth="575.0" style="-fx-background-color: #393e46;" vgap="8.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="userModelUi.passChange.PassChange">
+    <padding>
+        <Insets bottom="34.0" left="34.0" right="34.0" top="34.0" />
+    </padding>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints maxHeight="59.99999999999994" minHeight="24.0" prefHeight="93.0" />
+        <RowConstraints maxHeight="49.0" minHeight="0.0" prefHeight="79.0" />
+        <RowConstraints maxHeight="49.0" minHeight="10.0" prefHeight="79.0" />
+        <RowConstraints maxHeight="49.0" minHeight="10.0" prefHeight="79.0" />
+    </rowConstraints>
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints minWidth="10.0" prefWidth="104.0" />
+        <ColumnConstraints minWidth="10.0" prefWidth="122.0" />
+    </columnConstraints>
+    <children>
+        <Label alignment="CENTER" contentDisplay="TOP" lineSpacing="1.0" prefHeight="60.0" prefWidth="264.0" text="Reset Password" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BASELINE">
+            <font>
+                <Font name="Courier New Bold" size="29.0" />
+            </font>
+            <opaqueInsets>
+                <Insets bottom="11.0" left="11.0" right="11.0" top="11.0" />
+            </opaqueInsets>
+            <GridPane.margin>
+                <Insets bottom="22.0" top="22.0" />
+            </GridPane.margin>
+            <padding>
+                <Insets bottom="11.0" top="11.0" />
+            </padding>
+        </Label>
+        <TextField fx:id="" alignment="CENTER" prefHeight="19.0" prefWidth="143.0" promptText="example@email.com" style="-fx-background-radius: 15px; -fx-padding: 8px;" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.rowIndex="2">
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin>
+            <font>
+                <Font name="Dubai Regular" size="14.0" />
+            </font></TextField>
+        <Button defaultButton="true" mnemonicParsing="false" prefHeight="75.0" prefWidth="125.0" style="-fx-background-color: #0074d9; -fx-background-radius: 15px;" text="Reset" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+            <font>
+                <Font name="Dubai Regular" size="14.0" />
+            </font>
+            <GridPane.margin>
+                <Insets />
+            </GridPane.margin>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <Button defaultButton="true" layoutX="169.0" layoutY="311.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="125.0" style="-fx-background-radius: 15px; -fx-background-color: #ff4136;" text="Cancel" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
+            <font>
+                <Font name="Dubai Regular" size="14.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+    </children>
+    <opaqueInsets>
+        <Insets bottom="11.0" left="11.0" right="11.0" top="11.0" />
+    </opaqueInsets>
+</GridPane>
